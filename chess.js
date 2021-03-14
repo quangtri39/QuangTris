@@ -1,6 +1,6 @@
 const hoverColor = 'green';     // Chuyển thành màu xanh khi kéo cờ vào ô
 const hoverKillColor = 'red';   // Chuyển thành màu đỏ khi kéo quân cờ ta vào quân cờ địch
-var playerTurn = 'black';       // Biến đến lượt người chơi
+var playerTurn = 'white';       // Biến đến lượt người chơi
 
 const piecesCharWhite = {
     pawn: '♙',
