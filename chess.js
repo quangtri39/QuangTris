@@ -524,16 +524,13 @@ function kingMove(posX, posY, checkcastling = true){
     if(getPieceInfo(posX, posY).ismoved == true){return arrayLocation;}
 
     let rooks = document.querySelectorAll('[piece="rook"]');
-    console.log(rooks)
-    for (i = 0; i <= rooks.length; i++){     
-        console.log(rooks[i], i, rooks.length)
-        let arrLocationRook = getLocationXY(rooks[i]);   
+    for (let i = 0; i < rooks.length; i++){     
+        let arrLocationRook = getLocationXY(rooks[i]); 
         // Nếu con xe không phải quân của mình thì không cho
         if(!isMyChess(arrLocationRook[0], arrLocationRook[1])){continue;}
         // Nếu xe đã di chuyển thì không cho
         if(rooks[i].getAttribute("ismoved") == "true"){continue;}    
         // Nếu xe ở bên trái 
-            
         if(parseInt(posY) - arrLocationRook[1] > 0){
             //Nếu 2 vị trí bên trái đã có quân địch chiếu vào rồi thì không cho
             if(checkPosHaveChessLooked(parseInt(posX), parseInt(posY) - 1)){continue;}
